@@ -11,23 +11,21 @@
     :root, html, body {
       margin: 0;
       padding: 0;
+      background-color: white;
+      color: black;
     }
     #demo {
-      margin: var(--ddd-spacing-2);
+      margin: var(--ddd-spacing-4);
     }
     counter-app {
-      margin: var(--ddd-spacing-2);
-      border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
+      margin: var(--ddd-spacing-4);
+      border: var(--ddd-border-xs);
     }
     counter-app:hover {
       box-shadow: var(--ddd-boxShadow-sm);
+      background-color: var(--ddd-theme-default-linkLight);
     }
-    #example {
-      --counter-app-font-size: var(--ddd-font-size-l);
-      background-color: var(--ddd-accent-2);
-      color: var(--ddd-primary-17);
-    }
+    
   </style>
   <title>counter-app</title>
 </head>
@@ -36,6 +34,7 @@
   <div id="demo">
     <h1>counter-app</h1>
     <counter-app></counter-app>
+    <counter-app counter="0" min="10" max="25"></counter-app>
   </div>
   <script type="module" src="./counter-app.js"></script>
 </body>
